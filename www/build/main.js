@@ -107,10 +107,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var FeedPage = /** @class */ (function () {
+    //public nomeUsuario:string = "Senac Roraima";
     function FeedPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.nomeUsuario = "Senac Roraima";
+        this.objeto_feed = {
+            titulo: "Senac Roraima",
+            data: "17 de Março de 2018",
+            descricao: "O mercado de trabalho precisa de você!",
+            qtde_likes: 12,
+            qtde_comments: 4,
+            time_comment: "11h ago"
+        };
     }
     FeedPage.prototype.somaNumeros = function (n1, n2) {
         alert("Minha função funfou!\nSoma = " + (n1 + n2));
@@ -121,11 +129,12 @@ var FeedPage = /** @class */ (function () {
     };
     FeedPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-feed',template:/*ion-inline-start:"C:\Users\Elineuton\Documents\workspace\ionic\myApp\src\pages\feed\feed.html"*/'<!--\n  Generated template for the FeedPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Feed</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/imgs/avatar.jpg">\n      </ion-avatar>\n      <h2 class="feed_title">{{ nomeUsuario }}</h2>\n      <p class="feed_date">17 de Março de 2018</p>\n    </ion-item>\n\n    <img src="assets/imgs/feed_image.jpeg">\n\n    <ion-card-content>\n      <p>O mercado de trabalho precisa de você!</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="thumbs-up"></ion-icon>\n          <div>12 Likes</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="text"></ion-icon>\n          <div>4 Comments</div>\n        </button>\n      </ion-col>\n      <ion-col center text-center>\n        <ion-note>\n          11h ago\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n  \n</ion-content>'/*ion-inline-end:"C:\Users\Elineuton\Documents\workspace\ionic\myApp\src\pages\feed\feed.html"*/,
+            selector: 'page-feed',template:/*ion-inline-start:"C:\Users\Elineuton\Documents\workspace\ionic\myApp\src\pages\feed\feed.html"*/'<!--\n  Generated template for the FeedPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Feed</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-card>\n\n    <ion-item>\n      <ion-avatar item-start>\n        <img src="assets/imgs/avatar.jpg">\n      </ion-avatar>\n      <h2 class="feed_title">{{ objeto_feed.titulo }}</h2>\n      <p class="feed_date">{{objeto_feed.data}}</p>\n    </ion-item>\n\n    <img src="assets/imgs/feed_image.jpeg">\n\n    <ion-card-content>\n      <p>{{objeto_feed.descricao}}</p>\n    </ion-card-content>\n\n    <ion-row>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="thumbs-up"></ion-icon>\n          <div>{{objeto_feed.qtde_likes}}</div>\n        </button>\n      </ion-col>\n      <ion-col>\n        <button ion-button icon-left clear small>\n          <ion-icon name="text"></ion-icon>\n          <div>{{objeto_feed.qtde_comments}} Comments</div>\n        </button>\n      </ion-col>\n      <ion-col center text-center>\n        <ion-note>\n          {{objeto_feed.time_comment}}\n        </ion-note>\n      </ion-col>\n    </ion-row>\n\n  </ion-card>\n  \n</ion-content>'/*ion-inline-end:"C:\Users\Elineuton\Documents\workspace\ionic\myApp\src\pages\feed\feed.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object])
     ], FeedPage);
     return FeedPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=feed.js.map

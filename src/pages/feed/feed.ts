@@ -14,7 +14,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'feed.html',
 })
 export class FeedPage {
-  public nomeUsuario:string = "Senac Roraima";
+
+  public objeto_feed = {
+    titulo: "Senac Roraima",
+    data: "17 de Março de 2018",
+    descricao: "O mercado de trabalho precisa de você!",
+    qtde_likes:12,
+    qtde_comments:4,
+    time_comment:"11h ago"
+  }
+
+  //public nomeUsuario:string = "Senac Roraima";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
